@@ -5,7 +5,7 @@
   "main": "dist/server.js",
   "scripts": {
     "dev": "npm run start-dev",
-    "build": "tsc",
+    "build": "tsc && cp -r src/views dist/views && cp -r src/public dist/public",
     "start": "node dist/server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start-dev": "nodemon --legacy-watch --watch src --ext ts,json,mustache --exec ts-node src/server.ts"
