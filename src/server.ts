@@ -18,7 +18,7 @@ server.use(mainRouter);
 const PORT = Number(process.env.PORT) || 4000;
 
 server.use((req, res) => {
-  res.render('pages/404');
+  res.status(404).render('pages/404');
 });
 
 server.listen(PORT, () => {
